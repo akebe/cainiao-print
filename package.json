@@ -1,0 +1,20 @@
+{
+  "name": "cainiao-print",
+  "author": "akebe <asseek@163.com>",
+  "version": "0.0.1",
+  "description": "cainiao print",
+  "main": "src/index.js",
+  "keywords": [
+    "print",
+    "cainiao print",
+    "cai niao print",
+    "cainiao-print",
+    "cai-niao-print"
+  ],
+  "homepage": "https://github.com/akebe/cainiao-print",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:akebe/cainiao-print.git"
+  },
+  "license": "MIT"
+}
