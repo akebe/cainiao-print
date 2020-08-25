@@ -4,6 +4,8 @@
  * By asseek
  * https://open.taobao.com/doc.htm?docId=107014&docType=1
  */
+import Socket from './socket.js';
+
 class CainiaoPrint {
 
   constructor(
@@ -12,8 +14,9 @@ class CainiaoPrint {
       httpUrl = 'ws://localhost:13528',
       httpsUrl = 'wss://localhost:13529',
       isHttps = 'https:' === document.location.protocol,
+      reconnectInterval = 2000,
     } = {}) {
-    const socket = new WebSocket(isHttps ? httpsUrl : httpUrl);
+    const socket = new Socket(isHttps ? httpsUrl : httpUrl, {reconnectInterval});
 
     socket.addEventListener('open', () => {
       this.startRequest();

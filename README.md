@@ -35,6 +35,7 @@ cainiao.socket.addEventListener('close', () => {
   // 连接中断
 });
 ```
+**注意：`cainiao.socket`是为了能断线重连经过二次封装的`WebSocket`，不完全兼容标准`WebSocket`方法**
 
 ##方法 
 本模块将文档内提供的所有方法均封装成`Promise`，以便统一调用，如果连接中断，会一直`pending`等到连接上云打印客户端再发送请求
@@ -264,6 +265,7 @@ constructor options
   httpUrl = 'ws://localhost:13528',
   httpsUrl = 'wss://localhost:13529',
   isHttps = 'https:' === document.location.protocol,
+  reconnectInterval = 2000, // 云打印断线重连的间隔 ms
 }
 ```
 

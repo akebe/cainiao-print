@@ -1,7 +1,7 @@
 {
   "name": "cainiao-print",
   "author": "akebe <asseek@163.com>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "cainiao print",
   "main": "src/index.js",
   "keywords": [
@@ -9,7 +9,9 @@
     "cainiao print",
     "cai niao print",
     "cainiao-print",
-    "cai-niao-print"
+    "cai-niao-print",
+    "菜鸟",
+    "菜鸟云打印"
   ],
   "homepage": "https://github.com/akebe/cainiao-print",
   "repository": {
