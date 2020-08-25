@@ -1,12 +1,14 @@
-#CainiaoPrint
+
+# CainiaoPrint  
+
 菜鸟云打印交互模块  
 根据文档实现 [https://open.taobao.com/doc.htm?docId=107014&docType=1](https://open.taobao.com/doc.htm?docId=107014&docType=1)  
 
-##安装
+## 安装
 ```
 npm install cainiao-print --save
 ```
-##使用
+## 使用
 ```
 import CainiaoPrint from 'cainiao-print';
 
@@ -23,7 +25,7 @@ cainiao.getPrinters().then(({defaultPrinter, printers}) => {
   console.log(printers);          // 打印机列表
 });
 ```
-###连接状态与监听
+### 连接状态与监听
 可以通过`cainiao.socket.readyState`判断与云打印的连接状态，参见[MDN WebSocket/readyState](https://developer.mozilla.org/zh-CN/docs/Web/API/WebSocket/readyState)  
 通过监听连接状态
 ```
@@ -37,7 +39,7 @@ cainiao.socket.addEventListener('close', () => {
 ```
 **注意：`cainiao.socket`是为了能断线重连经过二次封装的`WebSocket`，不完全兼容标准`WebSocket`方法**
 
-##方法 
+## 方法 
 本模块将文档内提供的所有方法均封装成`Promise`，以便统一调用，如果连接中断，会一直`pending`等到连接上云打印客户端再发送请求
 ### cainiao.request(params) 统一请求入口
 根据请求协议格式直接调用此方法发送请求，`requestID`,`version`可省略，下面代码以`getPrinters`举例
@@ -268,5 +270,3 @@ constructor options
   reconnectInterval = 2000, // 云打印断线重连的间隔 ms
 }
 ```
-
-
