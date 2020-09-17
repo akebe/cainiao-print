@@ -1,9 +1,9 @@
 {
   "name": "cainiao-print",
   "author": "akebe <asseek@163.com>",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "cainiao print",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "keywords": [
     "print",
     "cainiao print",
@@ -13,10 +13,20 @@
     "菜鸟",
     "菜鸟云打印"
   ],
+  "scripts": {
+    "build": "babel src -d dist --presets es2015,stage-2"
+  },
   "homepage": "https://github.com/akebe/cainiao-print",
   "repository": {
     "type": "git",
     "url": "git@github.com:akebe/cainiao-print.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  }
 }
